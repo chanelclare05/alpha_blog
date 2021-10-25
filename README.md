@@ -22,6 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-Structure of a Rails applicaion 
-md = markdown # rails_application_introduction
