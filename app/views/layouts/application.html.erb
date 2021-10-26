@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>a rails blog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Alphablog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  
+
+  <body class='d-flex flex-column'>
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
