@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_10_26_121650) do
+=======
+ActiveRecord::Schema.define(version: 2021_10_26_062311) do
+>>>>>>> create-users-table-model
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -26,6 +30,13 @@ ActiveRecord::Schema.define(version: 2021_10_26_121650) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
