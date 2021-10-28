@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   def create
     #'white list' what we allow - basically filtering through
     @article = Article.new(article_params)
-    @article.user = User.last
+    @article.user = current_user
     if @article.save
       flash[:notice] = "Article was succesfully created."
       redirect_to article_path(@article)
