@@ -16,7 +16,6 @@ class UsersController < ApplicationController
   end 
 
   def edit 
-  
   end 
 
   def update
@@ -30,6 +29,10 @@ class UsersController < ApplicationController
 
   def show
     @articles = @user.articles
+  end 
+
+  def index
+    @users = User.all
   end 
 
   private 
