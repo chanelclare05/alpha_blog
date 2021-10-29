@@ -1,10 +1,14 @@
-<h1 class="text-center mt-4 mb-4"> <%= @user.username %>'s profile <%= link_to "Admin", user_path(@user) , class: 'btn btn-outline-danger' %> </h1>
+<h1 class="text-center mt-4 mb-4"> <%= @user.username %>'s profile 
+<% if @user.admin? %>
+   <%= link_to "Admin", user_path(@user) , class: 'btn btn-outline-danger' %> </h1>
+<% end %>
 
 
 <div class="text-center mt-4">
   <% if logged_in? && @user == current_user %>
     <%= link_to "Edit Your Profile", edit_user_path(@user), class: 'btn btn-outline-info' %>
     <%= link_to "Create a new article", new_article_path , class: 'btn btn-outline-info' %>
+    <%= link_to "Delete Your Profile", user_path(@user), method: :delete, class: "btn btn-outline-danger"%>
     
   <% end %>
 </div>
