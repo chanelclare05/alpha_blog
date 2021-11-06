@@ -1,6 +1,8 @@
 <h1 class="text-center mt-4 mb-4"> <%= @user.username %>'s profile 
 <% if @user.admin? %>
-   <%= link_to "Admin", user_path(@user) , class: 'btn btn-outline-danger' %> </h1>
+   <%= link_to "Admin", user_path(@user) , class: "badge badge-pill badge-info mr-1" %> </h1>
+
+
 <% end %>
 
 
