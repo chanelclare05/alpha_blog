@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   #RESTful routes 
   resources :articles
   resources :users, except: [:new]
+  resources :categories, except: [:destroy]
 end
 
