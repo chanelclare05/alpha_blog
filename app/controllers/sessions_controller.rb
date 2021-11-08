@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_to user_path(user)
 
     else 
-      flash.now[:alert] = "There was something wrong with your login details. Please try again."
+      flash[:alert] = "There was something wrong with your login details. Please try again."
       render 'new'
     end 
   end 
